@@ -9,7 +9,7 @@ DATA_DIR = BASE_DIR / "data"
 
 
 @st.cache_data
-def load_data() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+def load_data() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     cars_df = pd.read_csv(DATA_DIR / "cars_processed.csv")
 
     general_df = (
@@ -30,5 +30,12 @@ def load_data() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]
         index_col="Country",
     )
     depreciation_df = pd.read_csv(DATA_DIR / "depreciation_processed.csv", sep=";")
+    lez_df = pd.read_csv(DATA_DIR / "data_lez.csv", sep=";")
+    euro_df = pd.read_csv(
+        DATA_DIR / "data_euro_categories.csv",
+        sep=";",
+        header=None,
+        names=["milestone", "date"],
+    )
 
-    return cars_df, general_df, sales_df, depreciation_df
+    return cars_df, general_df, sales_df, depreciation_df, lez_df, euro_df

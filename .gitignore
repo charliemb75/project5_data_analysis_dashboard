@@ -1,3 +1,4 @@
 .env
 .vscode
 data/cars_raw.csv
+dashboard/__pycache__
