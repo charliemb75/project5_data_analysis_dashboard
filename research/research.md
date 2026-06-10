@@ -11,7 +11,7 @@ The research points to a clear opportunity in the used-car market:
 * The average cost of a claim is high enough (675 €) to matter for both buyers and dealers.
 
 
-### Emissions Milestones and Low Emissions Zones:
+### Emissions Milestones and Low Emissions Zones
 Low-emission policies make the market even more timely:
 * Cars newer than the current fleet average age are already starting to be excluded in some cities.
     * The average vehicle age at the EU is 12.3 years (manufacture date around March 2014).
@@ -21,7 +21,7 @@ Low-emission policies make the market even more timely:
 * Only 24% of europeans (+100 million) currently live in a LEZ, but 70% live in urban areas (+300 million).
     * There's a high probability of rapid adoption, which would impact millions, specially in Eastern Europe (older vehicles and fewer LEZ to date)
 
-### Age and Depreciation:
+### Age and Depreciation
 The age and depreciation data reinforces the same conclusion:
 * Almost half of the cars available in the market are between 2 and 6 years old.
     * This is the period where depreciation curves diverge the most between optimistic and pessimistic estimations.
@@ -56,6 +56,9 @@ The main product risks are mostly about accuracy and damaged trust:
 ## General Data
 * https://commission.europa.eu/publications/study-second-hand-cars-market_en
 * https://www.best-selling-cars.com/europe/2025-full-year-europe-car-sales-per-eu-uk-and-efta-country
+
+## Vehicle Age
+https://www.kaggle.com/datasets/nestorwinamo/used-car-database-in-europe
 
 ## Depreciation
 * https://www.autoexpress.co.uk/tips-advice/359491/car-depreciation-explained-future-residual-values-and-how-theyre-calculated
