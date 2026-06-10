@@ -1,1 +1,0 @@
-Practical steps, timeline, cost, and assumptions
