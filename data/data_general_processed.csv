@@ -1,17 +1,17 @@
-fraction_dealerships;0,6
-fraction_private;0,35
-fraction_auctions;0,05
+Dealerships;0,6
+Private;0,35
+Auctions;0,05
 trust_dealers;0,73
 trust_private;0,64
 trust_auctions;0,46
-knowledge_cars;0,32
-knowledge_trading;0,29
-unfair_practices;0,25
-problems_1_year;0,41
+Know cars;0,32
+Know trading;0,29
+Unfair treatment;0,25
+1st year;0,41
 problems_1_year_1_month;0,4
-problems_1_month;0,164
+1st month;0,164
 chances_guarantee;0,27
-covered_guarantee;0,1107
+Covered;0,1107
 cost_14;518
 cost_26;675
 currently_lez_millions;103,7

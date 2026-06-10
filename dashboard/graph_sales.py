@@ -3,9 +3,11 @@ import plotly.graph_objects as go
 import streamlit as st
 
 
-def render_sales_graph(sales_df: pd.DataFrame) -> None:
-    st.subheader("Market volume")
-
+def render_sales_graph(
+    sales_df: pd.DataFrame,
+    title: str = "Market volume",
+    height: int = 380,
+) -> None:
     chart_df = sales_df[["Used", "Total"]].copy()
     chart_df["Used"] = pd.to_numeric(
         chart_df["Used"].astype(str).str.replace(",", ".", regex=False)
@@ -35,7 +37,9 @@ def render_sales_graph(sales_df: pd.DataFrame) -> None:
     )
 
     fig.update_layout(
-        height=350,
+        title=dict(text=title, x=0.5, xanchor="center", y=0.98, yanchor="top"),
+        height=height,
+        margin=dict(l=0, r=0, t=55, b=10),
         xaxis_title="",
         yaxis_title="",
         xaxis_showgrid=False,

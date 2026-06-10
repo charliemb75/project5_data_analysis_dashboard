@@ -3,9 +3,10 @@ import plotly.graph_objects as go
 import streamlit as st
 
 
-def render_depreciation_graph(depreciation_df: pd.DataFrame) -> None:
-    st.subheader("Depreciation comparison")
-
+def render_depreciation_graph(
+    depreciation_df: pd.DataFrame,
+    title: str = "Depreciation comparison",
+) -> None:
     pair_styles = {
         "Autoexp": {"color": "#1f77b4"},
         "Motorway": {"color": "#ff7f0e"},
@@ -81,6 +82,7 @@ def render_depreciation_graph(depreciation_df: pd.DataFrame) -> None:
     )
 
     fig.update_layout(
+        title=dict(text=title, x=0.5, xanchor="center"),
         height=380,
         xaxis_title="Year",
         yaxis_title="",

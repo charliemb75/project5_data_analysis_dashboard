@@ -4,9 +4,10 @@ from plotly.subplots import make_subplots
 import streamlit as st
 
 
-def render_age_overlay_graph(cars_df: pd.DataFrame, title: str = "Age distribution and cumulative share") -> None:
-    st.subheader(title)
-
+def render_age_overlay_graph(
+    cars_df: pd.DataFrame,
+    title: str = "Age distribution and cumulative share",
+) -> None:
     age_counts_full = (
         cars_df["age"]
         .dropna()
@@ -49,6 +50,7 @@ def render_age_overlay_graph(cars_df: pd.DataFrame, title: str = "Age distributi
     )
 
     fig.update_layout(
+        title=dict(text=title, x=0.5, xanchor="center"),
         height=380,
         xaxis_title="",
         yaxis_title="Count",

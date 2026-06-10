@@ -1,5 +1,7 @@
 # Recommendation
 
+Overall, the research suggests a strong opportunity for an AI assistant that helps used-car buyers compare listings, understand risks, and ask the right questions before purchase. The combination of market scale, buyer uncertainty, rising emissions pressure, and the lack of personalized buyer-side tools makes this a timely use case.
+
 It is recommended to build this tool as an MVP first, because the market signal is strong, the use case is clear, and the initial scope can be kept focused.
 
 ## Implementation Steps And Timeline

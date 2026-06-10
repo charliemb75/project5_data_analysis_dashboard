@@ -3,9 +3,10 @@ import plotly.express as px
 import streamlit as st
 
 
-def render_lez_map(lez_df: pd.DataFrame, title: str = "Low Emission Zones in Europe") -> None:
-    st.subheader(title)
-
+def render_lez_map(
+    lez_df: pd.DataFrame,
+    title: str = "Low Emission Zones in Europe",
+) -> None:
     chart_df = lez_df.copy()
     chart_df["population_LEZs"] = pd.to_numeric(
         chart_df["population_LEZs"].astype(str).str.replace(",", ".", regex=False)
@@ -21,8 +22,9 @@ def render_lez_map(lez_df: pd.DataFrame, title: str = "Low Emission Zones in Eur
     )
 
     fig.update_layout(
+        title=dict(text=title, x=0.5, xanchor="center", y=0.98, yanchor="top"),
         height=430,
-        margin=dict(l=0, r=0, t=10, b=0),
+        margin=dict(l=0, r=0, t=55, b=0),
         coloraxis_colorbar=dict(title="Population in LEZs"),
         geo=dict(
             projection_type="mercator",

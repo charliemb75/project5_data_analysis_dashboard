@@ -3,9 +3,10 @@ import plotly.graph_objects as go
 import streamlit as st
 
 
-def render_euro_timeline(euro_df: pd.DataFrame, title: str = "Emissions Milestones in the EU") -> None:
-    st.subheader(title)
-
+def render_euro_timeline(
+    euro_df: pd.DataFrame,
+    title: str = "Emissions Milestones in the EU",
+) -> None:
     chart_df = euro_df.head(8).copy()
     chart_df["date"] = pd.to_datetime(chart_df["date"], format="%d/%m/%Y")
     timeline_dates = chart_df["date"].tolist()
@@ -85,6 +86,7 @@ def render_euro_timeline(euro_df: pd.DataFrame, title: str = "Emissions Mileston
     )
 
     fig.update_layout(
+        title=dict(text=title, x=0.5, xanchor="center"),
         height=250,
         margin=dict(l=0, r=0, t=35, b=25),
         xaxis_title="",

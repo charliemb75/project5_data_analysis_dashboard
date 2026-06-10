@@ -18,7 +18,7 @@ def render_lez_text(general_df: pd.DataFrame) -> None:
 
     st.markdown(
         f"""
-        As of October 2024:
+        **Affected population in the EU** (as of October 2024):
         
         **Living within a LEZ:** {currently_lez_millions:.1f} million ({currently_lez_fraction:.0%})
 

@@ -3,13 +3,15 @@ import plotly.express as px
 import streamlit as st
 
 
-def render_seller_graph(general_df: pd.DataFrame) -> None:
-    st.subheader("General market composition")
-
+def render_seller_graph(
+    general_df: pd.DataFrame,
+    title: str = "General market composition",
+    height: int = 300,
+) -> None:
     general_share_columns = [
-        "fraction_dealerships",
-        "fraction_private",
-        "fraction_auctions",
+        "Dealerships",
+        "Private",
+        "Auctions",
     ]
 
     general_share_df = (
@@ -38,9 +40,11 @@ def render_seller_graph(general_df: pd.DataFrame) -> None:
         insidetextanchor="middle",
     )
     fig.update_layout(
+        title=dict(text=title, x=0.5, xanchor="center", y=0.98, yanchor="top"),
         showlegend=True,
         barmode="stack",
-        height=350,
+        height=height,
+        margin=dict(l=0, r=0, t=55, b=10),
         xaxis_range=[0, 1],
         xaxis_tickformat=".0%",
         xaxis_title="",
